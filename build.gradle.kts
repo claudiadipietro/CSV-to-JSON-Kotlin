@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     val ktor_version = "2.0.3"
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.7.0")
     testImplementation(kotlin("test"))
     implementation("io.ktor:ktor-client-core:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
@@ -24,7 +25,10 @@ dependencies {
     implementation("io.ktor:ktor-server-netty:2.0.3")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
-    implementation ("org.slf4j:slf4j-simple:1.6.1")
+    implementation("org.slf4j:slf4j-simple:1.7.36")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
+    implementation("org.apache.commons:commons-csv:1.9.0")
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
 }
 
 tasks.test {
